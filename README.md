@@ -1,50 +1,79 @@
-# 📦 Project Name
+📚 Fullstack LMS (Learning Management System) with Ruby on Rails 7
+Markdown
 
-**Project Name** is a Ruby application designed to [briefly describe the main purpose and what problem it solves].  
-It demonstrates clean architecture, modern Ruby practices, and is ready for production use.
+# 📚 Fullstack LMS with Ruby on Rails 7
+
+This project is a complete Learning Management System (LMS) built with Ruby on Rails 7, Hotwire, Tailwind CSS, Stripe, and PostgreSQL. It allows users to access free and paid courses, track their progress, and enables administrators to manage content, users, and sales.
 
 ---
 
 ## 🚀 Features
 
-- [x] Feature 1 (e.g., RESTful API for managing tasks)
-- [x] Feature 2 (e.g., User authentication and authorization)
-- [x] Feature 3 (e.g., Integration with external APIs)
-- [x] Feature 4 (e.g., Command-line interface for automation)
+- User registration/login (Devise)
+- View free and premium courses
+- Course progress bar
+- Video lessons (Active Storage)
+- Purchase premium courses via Stripe
+- Admin dashboard with user, sales, and lesson analytics
+- Create/edit courses with rich text (Action Text)
+- Drag & drop lesson ordering (Stimulus, acts_as_list)
+- User and enrollment management
+- User pagination and search
+- 100% responsive interface
 
 ---
 
 ## 🛠️ Tech Stack
 
-- **Ruby** 3.2.0
-- **Sinatra** (or Rails, Hanami, etc.)
-- **PostgreSQL** (or SQLite, MySQL)
-- **ActiveRecord** (ORM)
-- **RSpec** (testing)
-- **Docker** & **Docker Compose**
-- **Other gems:** [List any other important gems]
-
----
-
-## 📦 Services Used
-
-- [GitHub](https://github.com/your-user/your-project)
-- [Heroku](https://heroku.com/) *(if deployed)*
-- [Other services, if any]*
+- Ruby on Rails 7
+- Hotwire (Turbo & Stimulus)
+- Tailwind CSS
+- Stripe
+- PostgreSQL
+- Active Storage
+- Devise
+- Action Text
+- acts_as_list
+- Pagy
+- groupdate
 
 ---
 
 ## ⚡ Getting Started
 
-### **Dependencies**
-
-- Ruby 3.2.0
-- Docker & Docker Compose (recommended)
-- PostgreSQL
-
-### **Setup**
-
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/your-user/your-project.git
-   cd your-project
+   git clone https://github.com/your-user/lms-rails7.git
+   cd lms-rails7
+Install dependencies:
+
+Bash
+
+bundle install
+yarn install
+Set up the database:
+
+Bash
+
+rails db:create db:migrate db:seed
+Configure environment variables:
+
+Stripe, AWS S3, etc. (see .env.example)
+Start the server:
+
+Bash
+
+rails server
+🧪 Tests
+Bash
+
+bundle exec rspec
+🖼️ Screenshots
+Admin Dashboard	Courses Page
+Dashboard	Courses
+💡 Best Practices
+Separate authentication for admin and user
+Use of partials for reusable UI components
+SQL injection prevention
+Webhooks for Stripe integration
+Fully responsive design
